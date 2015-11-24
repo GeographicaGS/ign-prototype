@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Instituto Geográfico Nacional'>
+    <meta name='author' content='Instituto Geográfico Nacional'>
+
+    <title>Instituto Geográfico Nacional</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Lato:300italic,300,100italic,100,400italic,400,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel='stylesheet' href='/css/styles.min.css'>
+    
+    <script src='http://libs.cartocdn.com/cartodb.js/v3/3.12/cartodb.js'></script>
+              
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
+      <script src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'></script>
+    <![endif]-->
+  </head>
+<body>
+
+    <header></header>
+    
+    <main></main>
+
+    <div id="map_container">
+        <div id="map"></div>
+    </div>
+
+    <footer></footer>
+
+</body>
+
+<script type="template/cartocss" id="road_routes_css">
+    #road_routes{
+        line-color: #FF6600;
+        line-width: 2;
+        line-opacity: 0.7;
+    }
+</script>
+
+<script type="template/cartocss"  id="route_park_css">
+    #route_park{
+      line-color: #FF6600;
+      line-width: 2;
+      line-opacity: 0.7;
+    }
+</script>
+
+<script type="template/cartocss"  id="park_boundary_css">
+    #park_boundary{
+        polygon-fill: #0F3B82;
+        polygon-opacity: 0.7;
+        line-color: #FFF;
+        line-width: 0.5;
+        line-opacity: 1;
+    }
+</script>
+
+</html>

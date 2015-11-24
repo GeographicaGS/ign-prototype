@@ -1,0 +1,21 @@
+<section id="layer_tree">
+	<nav>
+		<ul>
+			<li><a href="road">Caminos de Santiago</a></li>
+			<li><a href="park">Parques naturales</a></li>
+		</ul>
+	</nav>
+
+	<ul class="indicator_list">
+		<%  _.each(indicators,function (indicator){ %>
+			<li><%=indicator.name%></li>
+			<div class="layer_list hide">
+				<%  _.each(indicator.routes,function (route){ %>
+					<span class="active"><%=route.name%></span>
+				<% }); %>
+			</div>
+
+		<% }); %>
+	</ul>
+
+</section>
