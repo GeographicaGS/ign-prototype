@@ -1,7 +1,7 @@
-s3_id: XXXX
-s3_secret: XXXXX
-s3_bucket: XXXXX
-cloudfront_distribution_id: XXXX
+s3_id: <%= ENV['S3_ID'] %>
+s3_secret: <%= ENV['S3_SECRET'] %>
+s3_bucket: ign.geographica.gs
+cloudfront_distribution_id: E27E2X92O2AUAA
 
 # Below are examples of all the available configurations.
 # See README for more detailed info on each of them.
@@ -38,13 +38,13 @@ cloudfront_distribution_config:
   aliases:
     quantity: 1
     items:
-      CNAME: gdr.geographica.gs
+      CNAME: ign.geographica.gs
 
 routing_rules:
     -   condition:
             http_error_code_returned_equals: 404
         redirect:
-            host_name: gdr.geographica.gs
+            host_name: ign.geographica.gs
             replace_key_prefix_with: "#"
             http_redirect_code: 301
 

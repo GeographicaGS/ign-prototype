@@ -8,9 +8,29 @@
     <meta name='author' content='Instituto Geográfico Nacional'>
 
     <title>Instituto Geográfico Nacional</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/img/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#f2f2f2 ">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff ">
     
     <link href='https://fonts.googleapis.com/css?family=Lato:300italic,300,100italic,100,400italic,400,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <link rel='stylesheet' href='/css/fancybox/jquery.fancybox.css'>
     <link rel='stylesheet' href='/css/styles.min.css'>
     
     <script src='http://libs.cartocdn.com/cartodb.js/v3/3.12/cartodb.js'></script>
@@ -23,6 +43,17 @@
   </head>
 <body>
 
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-66042906-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
     <header></header>
     
     <main></main>
@@ -31,34 +62,23 @@
         <div id="map"></div>
     </div>
 
-    <footer></footer>
+    <footer>
+        <a href="http://www.geographica.gs" target="_blank">
+            D+D <span>Geographica</span>
+            <img src="/img/logo_geographica.svg">
+        </a>
+    </footer>
+
+    <div id="fancy_wms_url">
+        <h1>Especifique url del servicio externo</h1>
+        <input type="text">
+        <button>Explorar servicio</button>
+        <div class="clear"></div>
+        <span class="explore hide">Explorando...</span>
+        <span class="error hide">No se encontró ninguna capa soportada</span>
+        <div class="wms_list"></div>
+    </div>
 
 </body>
-
-<script type="template/cartocss" id="road_routes_css">
-    #road_routes{
-        line-color: #FF6600;
-        line-width: 2;
-        line-opacity: 0.7;
-    }
-</script>
-
-<script type="template/cartocss"  id="route_park_css">
-    #route_park{
-      line-color: #FF6600;
-      line-width: 2;
-      line-opacity: 0.7;
-    }
-</script>
-
-<script type="template/cartocss"  id="park_boundary_css">
-    #park_boundary{
-        polygon-fill: #0F3B82;
-        polygon-opacity: 0.7;
-        line-color: #FFF;
-        line-width: 0.5;
-        line-opacity: 1;
-    }
-</script>
 
 </html>

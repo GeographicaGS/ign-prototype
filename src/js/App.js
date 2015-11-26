@@ -73,6 +73,8 @@ App.ini = function(){
     this.mapView = new App.View.Map();
     $('#map_container').append(this.mapView.el);
 
+    $('header').append(new App.View.Header().el);
+
     Backbone.history.start({pushState: true});
 
     this.resizeMe();

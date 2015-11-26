@@ -1,8 +1,32 @@
 <section id="layer_tree">
 	<nav>
 		<ul>
-			<li><a href="road">Caminos de Santiago</a></li>
-			<li><a href="park">Parques naturales</a></li>
+			<li>
+				<a class="nav" href="road">C. de Santiago</a>
+				<div class="download_format">
+					<ul>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_road_route_query%>&filename=camino_santiago&format=kml">KML</a></li>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_road_route_query%>&filename=camino_santiago&format=geojson">GeoJSON</a></li>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_road_route_query%>&filename=camino_santiago&format=shp">Shapefile</a></li>
+						<li><a target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_road_route_query%>&filename=camino_santiago&format=csv">CSV</a></li>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_road_route_query%>&filename=camino_santiago&format=svg">SVG</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a class="nav" href="park">P. naturales</a>
+				<div class="download_format">
+					<ul>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_park_routes_query%>&filename=rutas_parques&format=kml">KML</a></li>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_park_routes_query%>&filename=rutas_parques&format=geojson">GeoJSON</a></li>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_park_routes_query%>&filename=rutas_parques&format=shp">Shapefile</a></li>
+						<li><a target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_park_routes_query%>&filename=rutas_parques&format=csv">CSV</a></li>
+						<li><a download target="_blank" href="https://<%=cartoName%>.cartodb.com/api/v2/sql?q=<%=donwload_park_routes_query%>&filename=rutas_parques&format=svg">SVG</a></li>
+					</ul>
+				</div>
+
+			</li>
+			<li><a class="nav" href="wms">WMS externos</a></li>
 		</ul>
 	</nav>
 
@@ -11,10 +35,22 @@
 			<li><%=indicator.name%></li>
 			<div class="layer_list hide">
 				<%  _.each(indicator.routes,function (route){ %>
-					<span class="active"><%=route.name%></span>
+					<span route_id="<%=route.id%>" class="active"><%=route.name%></span>
 				<% }); %>
 			</div>
 
+		<% }); %>
+	
+	</ul>
+	
+	<a class="add_wms hide" href="#">Añadir capas de un servicio externo</a>
+
+	<ul class="layer_wms_list">
+		<%  _.each(wmsLayers,function (layer){ %>
+			<li id_layer="<%=layer.id%>">
+				<span class="title"><%=layer.name%></span>
+				<span class="delete_wms"></span>
+			</li>
 		<% }); %>
 	</ul>
 

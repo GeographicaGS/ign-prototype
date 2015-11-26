@@ -6,17 +6,18 @@ deps.JS = [
     'js/lib/jquery-2.1.4.js',
     'js/lib/underscore-1.8.3.js',
     'js/lib/backbone-1.2.0.js',
+    'js/lib/jquery.fancybox.js',
+    'js/lib/sprintf.js',
 
 
     // Namespace
     'js/Namespace.js',
     'js/Config.js',
-    "js/Map.js",
-   
     
     // --------------------
     // ------  Views ------
     // --------------------
+    'js/View/HeaderView.js',
     'js/View/SidebarView.js',
     'js/View/MapView.js',
     'js/View/ErrorView.js',
